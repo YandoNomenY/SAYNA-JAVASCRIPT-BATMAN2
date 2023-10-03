@@ -1,0 +1,588 @@
+body { 
+    max-width: 100%;/*la taille du body est définie par la taille maximale des élements dans body*/
+    background-image: url('../Images/Illustrations/Bathome1.png'); /*IMage de fond pour l'en-tête*/
+    background-repeat: no-repeat;
+    background-size: 100vw 47vw; /*Définition de la taille de l'image de fond*/
+    color: white;
+    position: relative;
+    background-color: #000000; /*fond noir pour le reste de la page*/
+
+}
+.cadre { /*le contour de toute la page*/
+   
+    display: block;
+    border: solid 2px rgb(188, 187, 189,0.1);
+    border-top: none;
+    border-bottom: none;
+    width: 87vw;
+    margin: 0 5vw;    
+}
+#image-suivante {
+    position: absolute;
+    background: none;
+    width: 5vw;
+}
+
+header {
+    /*alignement des éléments dans header*/
+    display: flex;
+    justify-content: space-around; /*espacement des élément dans header*/
+    padding-top: 20px;
+    padding-bottom: 1vw;
+    
+}
+
+header img { /* batman icone*/
+    padding-right: 50vw;
+    width: 7vw;
+    height: 3vw;
+    margin-left: 7vw;
+}
+/*reglages de la barre de navigation*/
+.main {
+    display: inline-block;
+    position: relative;
+    width: 40vw;
+    margin-left: 5vw;
+}
+
+.main a{/*parametre pour les liens de navigations*/
+    position: relative;
+    text-decoration:none;   
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family:'Rajdhani';
+    margin-right: 15px;
+    padding-left: 1px;
+}
+
+.main a::before { /*lien actif*/
+    content: '';
+    position: absolute; 
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    background: #FFFFFF;
+    transition: width 0.5s ease-in-out;
+}
+/*Lien actif*/
+.main a.active-link::before {
+    width: 100%;
+    background-size: 100% 2px;
+}
+
+.lien {
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+    margin-right: 2.8vw;
+    height: 100vw;
+    cursor: pointer;
+    height: 420vw;
+    position: absolute;
+    margin-left: 82.12vw;
+}
+
+
+.updown {/*taille des baticones*/
+    width: 5vw;
+}
+.updown:hover {
+    width: 110%;
+}
+   
+
+.main a:hover::before { /*effet de surlement au passage du curseur*/
+   width: 100%;
+   background-size: 100% 2px;
+}
+hr { /*ligne horizentale apres header*/
+    margin-top: 1vw;   
+    border: solid 2px rgb(188, 187, 189,0.1);
+}
+aside { /*conteneur des textes d'introductions, boutons de navigation */
+    display: block;    
+    border-right: none;
+    border-left:none;
+    border-bottom:none;
+    font-size:18px;
+    justify-content: center;
+    margin-bottom: 2vw;
+    padding: 165px 0px 85px 0px;
+    text-align: center;
+    width: 95vw;
+    margin-right: 15vw;
+    margin-left: 7vw;
+    
+}
+
+aside b {
+    display: block;
+    
+    padding: 25px;
+}
+
+.special{ /* Parametrage de la disposition et taille de l'introduction et des logos scrollers*/
+    
+    display: flex;
+    width: 90vw;
+    margin-top: 5vw;
+    margin-left: 2.3vw;
+    
+}
+
+.lien img {
+    padding-top: 25px;
+}
+
+.bouton { /*les boutons Voir les heros et les adversaires*/
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    width: 300px;
+    height: 55px;
+    background: linear-gradient(to right, rgba(237,221,191,0.4) , rgba(25,88,125,0.2));
+    color: #FFFFFF;
+    
+}
+.bouton:hover {
+    background: linear-gradient(to right, rgba(237,221,191,1) , rgba(25,88,125,1));
+    color: #000000;
+}
+
+
+#down {/*flêche pour descendre*/
+    display: flex;
+    justify-content: center;
+   
+}
+h1 { /*Styles pour tous les grands titres*/
+    display: flex;
+    padding-left: 75px;
+    font-size: 36px;
+    font-family:'Rajdhani';
+}
+p{ /*styles spécialement pour les paragraphes*/
+    display: block;
+    width: 60vw;
+    text-align: justify;
+    padding-left: 75px;
+    font-size: 18px;
+    font-family:'Rajdhani';
+}
+.special1 { /* titre Nemesis avec le Batrang*/
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 2px;
+}
+.nemesis:nth-child(1){
+    position:absolute;
+    z-index: 1;
+    top: 130px;
+}
+.nemesis:nth-child(2) {
+    
+    top: 20px;
+    left: 100px;
+    position: absolute;
+}
+ .figure {
+    width: 98vw ;
+ }
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+.image li {
+    max-width: 70vw;
+    list-style-type: none;
+    margin-right: 5vw;
+    
+}
+.image  div {
+    
+    display: block;
+    
+    text-align: left;
+    margin: 10px;
+    
+}
+#pic {
+    
+    position: relative;
+}
+#pic>img:hover {
+    width: 110%;
+}
+
+
+
+figcaption {
+    display: none;
+    border-top: solid 1px rgb(196, 196, 196,0.5);
+    border-bottom: solid 3px rgb(196, 196, 196,0.5);
+    padding: 10px 10px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 19.6vw;
+}
+
+
+#descri { /* le conteneur des légendes*/
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, rgba(237,221,191,0.4) , rgba(70, 5, 1, 0.962));
+    color: #FFFFFF;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+}
+.date {
+    color: #FFFF00;
+}
+
+figcaption img { /*Parametre des photos des acteurs*/
+    width: 80px;
+    height: 80px;
+    border-radius: 70px;
+}
+
+.descri:nth-child(1){
+    position:relative;
+    z-index: 1;
+    
+}
+.descri:nth-child(2) { /* Le nom de l'acteur et la date de production du film*/
+    bottom: 80px;
+    left: 30px;
+    position: relative;
+}
+
+blockquote {
+    text-align: center;
+}
+#float1 {
+    float: left;
+}
+
+.pochette {
+    display: flex;
+    font-size: 10px;
+    text-align: left;
+    width: 400px;
+    
+    
+}
+
+.pochette img {
+    width: 150px;
+    height: 190px;
+}
+.legende {
+    display: block;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(197, 235, 245, 0.3) , #00131d);
+    border-top-right-radius:  10px;
+    border-bottom-right-radius: 10px;
+}
+
+.legende strong {
+    font-size: 13px;
+    color: yellow;
+}
+.multimedia{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-left: 12%;
+}
+
+.arrow {
+    display: block;
+    height: 60px;
+    margin-top: 50px;
+}
+
+.bathomeba2 {
+    display: flex;
+    margin: 0 auto;
+    width: 40vw;
+    padding-bottom: 100px;
+}
+
+#formulaire {
+    display: block;
+    border: solid 0.3px rgb(255, 255, 255, 0.1);
+    width: 100%;
+    font-family: 'Calibri light';
+    font-size: 14px;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(135deg, rgba(197, 235, 245, 0.3) , #000d14);
+}
+
+#formulaire form {
+    display: block;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 2vw;
+}
+
+#formulaire form h1{
+    justify-content: center;
+    padding-right:160px ;
+    margin-bottom: 60px;
+    font-size: 33px;
+}
+#formulaire form h2 {
+    font-family: 'Rajdhani';
+}
+#formulaire form h3 {
+    font-family: 'Calibri light';
+    
+}
+#formulaire form h4 {
+    font-family: 'Calibri';
+    border-bottom: solid 1px white;
+    width: 40vw;
+}
+#email {
+    border-bottom:solid 1px white;
+    background-color: transparent;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 40vw;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+#liste {
+    border-bottom:solid 1px white;
+    background-color: rgb(7, 38, 54);
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 40vw;
+    font-size: 14px;
+    margin-top: 20px;
+}
+#text {
+    border-bottom:solid 1px white;
+    background-color: transparent;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 40vw;
+    font-size: 14px;
+}
+
+/*Masquer les boutons radio natifs*/
+.checkbox{
+    display: none;
+}
+
+/*styliser les boutons personnalisés*/
+.check-button {
+    display: flex;
+    padding: 5px 10px;
+    margin: auto 20px;
+    width: 300px;
+    border: solid 1px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    transition: background-color 0.9s;
+}
+
+.check-button:hover {
+    border: solid 1px rgb(255, 0, 0,0.6);
+}
+
+.check1 {
+    justify-content: space-around;
+    display: flex;
+    margin: 0 20%;
+}
+
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    padding: 18px 70px;
+    margin-top: 30px;
+    margin-right:180px;
+    border:none ;
+    text-align: center;
+    font-size: 18px;
+    background:linear-gradient(to right, rgb(237, 222, 191,0.4) , rgba(244, 4, 20, 0.4));
+    color: white;
+}
+#submit:hover {
+    background:linear-gradient(to right, rgb(237, 222, 191,1) , rgba(244, 4, 20, 1));
+}
+
+.caché {
+    display: none;
+}
+
+#popup { /*style pour le pop-up et le message d'erreur*/
+    position: absolute;
+    background-image:linear-gradient(135deg, rgb(97, 124, 131) , rgb(0, 13, 20,1));
+    border-radius: 20px;
+    width: 70vw;
+    height: 22vw;
+    padding: 10px;
+    z-index: 100;
+    text-align: center;
+    padding-top: 17vw;
+    font-size: 40px;
+    font-family: 'Rajdhani';
+}
+/*Pour le pop up*/
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.subject {
+    position:relative;
+    
+}
+.sub1:nth-child(1) {
+    position:absolute;
+    z-index: 1;
+    top: 70px;   
+}
+.sub1:nth-child(2) {
+    position:absolute;
+    z-index: 1;
+    top: 70px;   
+}
+.container {   
+    margin: 15vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25vw;
+}
+
+.element:nth-child(1){
+    
+    width: 6vw;
+}
+
+.element:nth-child(2) {
+    
+    font-size: 20px;
+    font-family: 'Calibri';
+    
+    
+}
+
+.auteur {
+    font-size: 14px;
+    margin: 20px;
+    color: #c4c4c4;
+}
+.element:nth-child(3) {
+    
+    width: 90px;
+    margin-left: 49vw;    
+}
+
+footer {
+    text-align: center;
+    
+}
+
+.NB {/*Contenus du footer*/
+    display: flex;
+    justify-content: center;
+    width: 42vw;
+    padding-bottom: 5vw;
+    align-items: center;    
+    margin-left: 20vw;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 25vw;
+}
+
+#warner{/*Logo WB et avertissement d'aprobation du site*/
+    margin-bottom: 30px;
+}
+
+#warner img {
+    margin-right:20px ;
+
+}
+.logo { /*positionnement des logos RS*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    
+    align-items: center;
+    width: 2vw;
+    
+}
+.logo:hover {
+    width: 120%;
+    color: #FFFF00;
+}
+
+.blocklink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+.blocklink a {
+    max-width: 100%;
+    height: auto;
+}
+#cadre1 {
+    margin-top: 60vw;
+}
+
+#check {
+    margin-bottom: 2vw;
+}
+
+
+/*Apparition progressive + fade in en scroll*/
+
+
+
+
+.fade-left {
+    opacity: 0; /* Commencez par les éléments invisibles */
+    transform: translateX(-20vw); /* Les déplace légèrement vers la gauche */
+    transition: opacity 2s ease, transform 1.5s ease;
+}
+
+/* Classe pour rendre les éléments visibles */
+.fade-left.visible {
+    opacity: 1; /* Les éléments deviennent visibles */
+    transform: translateX(0); /* Les éléments reviennent à leur position d'origine */
+}
+
+.logo1 {
+    padding: 1vw;
+}
